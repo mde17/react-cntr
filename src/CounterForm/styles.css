@@ -1,0 +1,21 @@
+.CounterForm {
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(3, 3, 3, 0.1);
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  min-height: 100px;
+}
+.CounterForm__input-submit, .CounterForm__input {
+  border-radius: 2px;
+  padding: 1em;
+}
+.CounterForm__input-submit {
+  background-color: #ffd000;
+  color: #494949;
+  cursor: pointer;
+  transition: background-color .3s ease-out;
+}
+.CounterForm__input-submit:hover {
+  background-color: #ffdd49;
+}

@@ -1,0 +1,22 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  font-family: arial;
+  height: 100vh;
+  width: 100%;
+}
+input, button {
+  border: 1px solid #cdcdcd;
+  padding: 0.25em 0.75em;
+  outline: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+button {
+  cursor: pointer;
+}

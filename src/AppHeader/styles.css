@@ -1,0 +1,12 @@
+.AppHeader {
+  background-color: #1879ff;
+  height: 60px;
+  max-height: 60px;
+  min-height: 60px;
+}
+.AppHeader__title {
+  color: #f0f0f0;
+  line-height: 60px;
+  margin: 0;
+  text-align: center;
+}

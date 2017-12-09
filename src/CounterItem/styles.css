@@ -1,0 +1,56 @@
+.CounterItem {
+  align-items: center;
+  background-color: #fafafa;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(3,3,3,0.1);
+  display: flex;
+  height: 60px;
+  justify-content: flex-start;
+  margin: 10px 0;
+  min-height: 60px;
+  width: 500px;
+  min-width: 0%;
+}
+.CounterItem__info {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  min-width: 0%;
+  width: 100%;
+}
+.CounterItem__controls {
+  align-items: center;
+  display: flex;
+  min-width: 170px;
+  width: 170px;
+}
+.CounterItem__btn {
+  border-radius: 2px;
+  margin: 0 10px;
+  min-width: 28px;
+  transition: all 0.3s;
+}
+.CounterItem__btn--delete {
+  border: 0;
+  color: #898989;
+  font-size: 0.8em;
+}
+.CounterItem__btn--delete:hover {
+  background-color: #dfdfdf;
+  color: #ffffff;
+  font-size: 0.8em;
+}
+.CounterItem__count {
+  display: block;
+  min-width: 63px;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  width: 63px;
+}
+.CounterItem__title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}

@@ -3,7 +3,7 @@ var app         = express();
 var bodyParser  = require("body-parser");
 var compression = require("compression");
 var morgan      = require("morgan");
-var PORT        = Number( process.env.PORT || 3000 );
+var PORT        = Number( process.env.PORT || 3001 );
 var Counters    = require("./lib/Counters");
 
 app.use(morgan("combined"));
@@ -11,15 +11,15 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(compression());
 
-function sendFile(name) {
-  return function(req, res) {
-    res.sendFile(__dirname + "/static/" + name);
-  };
-}
+// function sendFile(name) {
+//   return function(req, res) {
+//     res.sendFile(__dirname + "/static/" + name);
+//   };
+// }
 
-app.get("/", sendFile("index.html"));
-app.get("/app.js", sendFile("app.js"));
-app.get("/app.css", sendFile("app.css"));
+// app.get("/", sendFile("index.html"));
+// app.get("/app.js", sendFile("app.js"));
+// app.get("/app.css", sendFile("app.css"));
 
 // [json] GET /api/v1/counters
 // => [
@@ -27,7 +27,7 @@ app.get("/app.css", sendFile("app.css"));
 // =>   {id: "zxcv", title: "steve", count: 3}
 // => ]
 app.get("/api/v1/counters", function(req, res) {
-  res.json(Counters.all())
+  res.json(Counters.all());
 });
 
 // [json] POST {title: "bob"} /api/v1/counters
@@ -67,7 +67,7 @@ app.post("/api/v1/counter/dec", function(req, res) {
   res.json(Counters.dec(req.body.id));
 });
 
-app.get("*", sendFile("index.html"));
-app.head("*", sendFile("index.html"));
+// app.get("*", sendFile("index.html"));
+// app.head("*", sendFile("index.html"));
 
-app.listen(PORT, console.log.bind(null, "PORT: " + PORT));
+app.listen(PORT, console.log.bind(null, "Listening on PORT: " + PORT));
